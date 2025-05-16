@@ -1,0 +1,57 @@
+/* Start of Hero */
+
+#hero-img{
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+#hero-name{
+    margin-bottom: 5px;
+    font-size: 50px;
+}
+
+#hero-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#hero-desc{
+    margin-bottom: 5px;
+    color: var(--desc-color);
+    font-size: 20px;
+}
+
+#resume{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 2px;
+    width: 100px;
+}
+
+#icons-container{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#icons-container a{
+    text-decoration: none;
+    color: white;
+}
+
+/* End of Hero */
+
+#location{
+    display: flex;
+    align-items: center;
+    color: var(--desc-color);
+    font-size: 15px;
+}
+
