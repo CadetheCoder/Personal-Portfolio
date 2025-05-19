@@ -16,7 +16,15 @@ body{
 
 .container{
     margin: 0 auto;
-    width: 800px;
+    max-width: 800px;
+    padding: 10px;
+}
+
+.header{
+    font-weight: lighter;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: 25px;
 }
 
 /* Start of Nav */
@@ -30,7 +38,7 @@ nav ul{
 
 nav{
     padding: 30px;
-    width: 300px;
+    max-width: 300px;
     margin: 0 auto;
     border-radius: 50px;
     margin-top: 40px;
@@ -40,19 +48,21 @@ nav{
 nav a{
     text-decoration: none;
     cursor: pointer;
+    color: white;
 }
 
 /* End of Nav */
 
 /* Start of Hero */
 
-#hero-container{
+.hero-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 #hero-info-container{
@@ -60,9 +70,6 @@ nav a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    width: 1000px;
-    z-index: 10;
 }
 
 #hero-left-circle{
@@ -109,8 +116,9 @@ nav a{
 }
 
 .hero-box{
-    width: 500px;
+    max-width: 1440px;
     height: 100px;
+    width: 100%;
 }
 
 .hero-box h1{
@@ -121,17 +129,13 @@ nav a{
     display: flex;
     gap: 10px;
     align-items: center;
-    width: 700px;
 }
+
 
 #hero-box2{
     display: flex;
     gap: 20px;
     align-items: center;
-}
-
-#hero-box3{
-    width: 600px;
 }
 
 #hero-box4{
@@ -172,20 +176,47 @@ nav a{
     border-radius: 2px;
 }
 
+.hero-icons:hover{
+    transform: translateY(-2px);
+}
+
+.hero-icons{
+    transition: 0.3s ease;
+}
+
+#location::after{
+    content: 'Tokyo, Jp';
+    transition: opacity 0.3s ease;
+}
+
+#location:hover::after{
+    content: "こんにちは";
+    font-size: 15px;
+}
+
+#about{
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#about.hidden{
+    opacity: 0;
+}
+
+#hero-box5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* End of Hero */
 
 /* Start of Projects */
 
-#projects-header{
-    font-weight: lighter;
-    padding-top: 100px;
-    padding-bottom: 20px;
-    font-size: 25px;
-}
-
 #projects-grid-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 50px;
     justify-content: center;
 }
@@ -272,16 +303,10 @@ nav a{
 }
 
 .project-icon-box{
-    border: 1px solid white;
     padding: 5px;
     border-radius: 5px;
-    color: white;
-}
-
-.project-icon-box:hover{
-    color: black;
-    background: white;
-    border: none;
+    background: linear-gradient(135deg, #555, #333);
+    color: #eee
 }
 
 .project-arrow{
@@ -292,7 +317,7 @@ nav a{
 .project-link{
     text-decoration: none;
     color: white;
-    transition: transform 0.5 ease-out;
+    transition: transform 0.4s ease;
 }
 
 .project-link:hover{
@@ -308,15 +333,8 @@ nav a{
     margin: 0 auto;
 }
 
-#skills-header{
-    font-weight: lighter;
-    padding-bottom: 20px;
-    font-size: 25px;
-    padding-top: 100px;
-}
-
 .skills-icons-box{
-    border: 1px solid white;
+    border: 1px solid var(--transparent-border);
     width: 100px;
     display: flex;
     justify-content: center;
@@ -331,31 +349,36 @@ nav a{
     gap: 10px;
 }
 
+#skills-circle-bottom-right{
+    background: #3F5EFB;
+    background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    opacity: .3;
+    filter: blur(100px);
+    left: 80%;
+}
+
 /* End of Skills */
 
 /* Start of Contact */
 
 #contact-container{
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-#contact-header{
-    font-weight: lighter;
-    padding-bottom: 20px;
-    font-size: 25px;
-    padding-top: 100px;
-}
-
 #contact-box{
-    width: 800px;
+    width: 100%;
     height: 100px;
     border: 1px solid white;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
 }
 
 #contact-name{
@@ -363,6 +386,101 @@ nav a{
     margin: 10px;
 }
 
+#contact-links-container a{
+    color: white;
+}
+
+#contact-links-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.contact-link-icons:hover{
+    transform: translateY(-2px);
+}
+
+.contact-link-icons{
+    transition: 0.3s ease;
+}
+
 /* End of Contact */
 
+/* Start of Footer */
 
+.footer-container{
+    display: flex;
+    width: 90%;
+    max-width: 780px;
+    justify-content: space-between;
+    color: var(--desc-color);
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* End of Footer */
+
+/* lg */
+@media (max-width: 1024px) {
+
+}
+
+/* md */
+@media (max-width: 768px) {
+
+
+    .hero-box h1{
+        font-size: 70px;
+    }
+
+    #hero-img{
+        height: 75px;
+        width: 75px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    .footer-container{
+        margin-bottom: 10px;
+    }
+
+    .header{
+        padding-bottom: 20px;
+    }
+
+}
+
+/* sm */
+@media (max-width: 640px) {
+
+}
+
+/* xs */
+@media (max-width: 475px) {
+
+    .hero-box h1{
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .header{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+
+
+    .hero-box h1{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 320px) {
+
+}
