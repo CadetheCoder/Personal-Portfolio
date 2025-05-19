@@ -62,7 +62,8 @@ nav a{
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 100px;
+    padding-bottom: 100px;
 }
 
 #hero-info-container{
@@ -70,6 +71,7 @@ nav a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 700px;
 }
 
 #hero-left-circle{
@@ -117,7 +119,6 @@ nav a{
 
 .hero-box{
     max-width: 1440px;
-    height: 100px;
     width: 100%;
 }
 
@@ -129,13 +130,28 @@ nav a{
     display: flex;
     gap: 10px;
     align-items: center;
+
 }
 
+#hero-box2 h1{
+    margin-left: 100px;
+}
 
 #hero-box2{
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+#hero-box3{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+#hero-box3 h1{
+    margin-left: 50px;
 }
 
 #hero-box4{
@@ -455,32 +471,99 @@ nav a{
 
 /* sm */
 @media (max-width: 640px) {
+    .hero-box h1{
+        font-size: 60px;
+    }
 
+    #hero-img{
+        height: 75px;
+        width: 75px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    #hero-desc-container{
+        font-size: 15px;
+    }
 }
 
 /* xs */
 @media (max-width: 475px) {
 
     .hero-box h1{
-        font-size: 60px;
+        font-size: 40px;
     }
+
+    #hero-img{
+        height: 50px;
+        width: 50px;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+
+    #hero-box1 h1{
+        margin-left: 40px;
+    }
+
+    #hero-box2{
+        margin-right: 30px;
+        gap: 10px;
+    }
+
+    #hero-box3 h1{
+        margin-left: 60px;
+    }
+
+
 }
 
 @media (max-width: 425px) {
-
     .header{
-        margin-top: 20px;
+        padding-top: 30px;
     }
 }
 
 @media (max-width: 375px) {
-
-
     .hero-box h1{
         font-size: 50px;
+    }
+
+    nav{
+        padding: 20px;
+        max-width: 300px;
     }
 }
 
 @media (max-width: 320px) {
+    .hero-box h1{
+        font-size: 40px;
+    }
+
+    #hero-desc-container{
+        font-size: 10px;
+    }
+
+    #hero-info-container{
+        max-width: 320px;
+    }
+
+    #hero-box1 h1{
+        margin-left: 30px;
+    }
+
+    #hero-box2{
+        margin-right: 50px;
+        gap: 10px;
+    }
+
+    #hero-box3 h1{
+        margin-left: 50px;
+    }
+
+    nav{
+        padding: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
 
 }
