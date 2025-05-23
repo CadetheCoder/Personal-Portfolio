@@ -476,8 +476,8 @@ nav a{
     }
 
     #projects-bg-effect-middle-right{
-        right: -15%;
-        bottom: -40%;
+        right: -0%;
+        bottom: -60%;
     }
 
     #projects-bg-effect-bottom-left{
@@ -485,7 +485,7 @@ nav a{
     }
 
     #skills-bg-effect-bottom-right{
-        right: -30%;
+        right: 14%;
     }
 
 }
@@ -575,7 +575,7 @@ nav a{
     }
 
     #projects-bg-effect-middle-right{
-        right: -15%;
+        right: -0%;
         bottom: -105%;
     }
 
