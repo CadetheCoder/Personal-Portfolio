@@ -18,3 +18,8 @@ aboutBtn.addEventListener("click", () => {
         }, 1000);
     }, 7000);
 });
+
+window.addEventListener('load', () => {
+    const heroContainer = document.querySelector(".hero-container");
+    heroContainer.classList.add("loaded");
+})
