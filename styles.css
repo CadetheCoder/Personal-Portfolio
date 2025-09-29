@@ -236,6 +236,15 @@ nav a{
 
 /* End of Hero */
 
+/* Start of Experience Section */
+
+#experience-container{
+    z-index: 10;
+    position: relative;
+}
+
+/* End of Experience Section */
+
 /* Start of Projects */
 
 .projects-container{
@@ -386,7 +395,7 @@ nav a{
 }
 
 #contact-name{
-    font-size: 25px;
+    font-size: 22px;
     margin: 10px;
 }
 
